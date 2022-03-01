@@ -910,12 +910,9 @@ com.instana.tracing:
 #  pcp_warn_limit: 150
 #  pcp_stop_limit: 250
 
-#com.instana.plugin.python:
-#  # Python AutoTrace will automatically find and instrument Python processes.
-#  # This is supported on Linux 64bit Python processes.
-#  autotrace:
-#    # Valid values: true, false
-#    enabled: true
+com.instana.plugin.python:
+  autotrace:
+    enabled: false
 #
 #    # The AutoTrace white list is used to identify python processes.  It is applied
 #    # _before_ the blacklist to get a list of potential candidate processes.  The white
