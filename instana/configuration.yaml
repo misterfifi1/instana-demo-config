@@ -999,6 +999,33 @@ com.instana.plugin.opentelemetry:
 com.instana.plugin.clr:
   tracing:
     enabled: true
+  instrumentation:
+    sdk:
+      targets:
+        - match:
+            type: class
+            class: 'traceBankDemo.Controllers.WeatherForecastController'
+            method: 'Get'
+            arguments: 0
+          span:
+            name: 'test-mfi'
+            type: 'ENTRY'
+            tags:
+              - name: 'This is a tag'
+                kind: argument
+                index: 0
+        - match:
+              type: class
+              class: 'traceBankDemo.Controllers.WeatherForecastController'
+              method: 'Test'
+              arguments: 0
+          span:
+            name: 'test-exit-mfi'
+            type: 'EXIT'
+            tags:
+              - name: 'This is a closure tag'
+                kind: argument
+                index: 0
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
