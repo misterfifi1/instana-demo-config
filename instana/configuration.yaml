@@ -1008,7 +1008,7 @@ com.instana.plugin.netcore:
             method: GetExecution
             arguments: 0
           span:
-            name: "Customer Creation"
+            name: "Customer_Creation"
             type: ENTRY
         - match:
               type: class
@@ -1016,8 +1016,8 @@ com.instana.plugin.netcore:
               method: ExecuteExec
               arguments: 2
           span:
-            name: "ExecuteExec C Program"
-            type: INTERMEDIATE
+            name: "ExecuteExec_Program"
+            type: EXIT
             tags:
               - name: customerId
                 kind: argument
