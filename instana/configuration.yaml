@@ -1003,10 +1003,10 @@ com.instana.plugin.netcore:
     sdk:
       targets:
         - match:
-              type: class
-              class: traceBankDemo.tool.Tool
-              method: ExecuteExec
-              arguments: 2
+            type: class
+            class: traceBankDemo.tool.Tool
+            method: ExecuteExec
+            arguments: 2
           span:
             name: "ExecuteExec_Program"
             type: ENTRY
