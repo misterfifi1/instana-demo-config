@@ -734,10 +734,10 @@ com.instana.plugin.generic.hardware:
 #      target: '' # host address
 
 # PostgreSQL
-#com.instana.plugin.postgresql:
-#  user: ''
-#  password: ''
-#  database: '' # by default PostgreSQL will use 'user' as database to connect to.
+com.instana.plugin.postgresql:
+  user: 'postgres'
+  password: 'changeme'
+  database: 'bank' # by default PostgreSQL will use 'user' as database to connect to.
 
 
 #PowerHMC
