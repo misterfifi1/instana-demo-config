@@ -91,9 +91,9 @@ com.instana.plugin.generic.hardware:
 # Default values for cloudwatch_period are in seconds and equal to AWS defaults
 # Values for include_tags/exclude_tags are comma separated list of tags in key:value format (example: env:dev,env:test)
 
-com.instana.plugin.netcore: 
-    profiling: 
-        enabled: true
+#com.instana.plugin.netcore: 
+#    profiling: 
+#        enabled: true
 
 #com.instana.plugin.aws:
 #  tagged-services-poll-rate: 300
@@ -944,8 +944,8 @@ com.instana.plugin.netcore:
 #        - 'com.instana.frontend'
 
 # OpenTelemetry Collector
-com.instana.plugin.opentelemetry:
-  enabled: true
+#com.instana.plugin.opentelemetry:
+#  enabled: true
 
 
 # PHP Tracing
@@ -996,11 +996,7 @@ com.instana.plugin.opentelemetry:
 #    sanitizeSql: true
 
 # .NET Full Framework tracing
-com.instana.plugin.clr:
-  sensor:
-    enabled: true
-  tracing:
-    enabled: true
+com.instana.plugin.netcore:
   instrumentation:
     sdk:
       targets:
