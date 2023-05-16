@@ -997,33 +997,27 @@ com.instana.plugin.generic.hardware:
 
 # .NET Full Framework tracing
 com.instana.plugin.netcore:
+  profiling:
+    enabled: true
   instrumentation:
     sdk:
       targets:
         - match:
             type: class
-            class: WeatherForecastController
+            class: traceBankDemo.Controllers.WeatherForecastController
             method: Get
             arguments: 0
           span:
             name: test-mfi
-            type: INTERMEDIATE
-            tags:
-              - name: db.connection_string
-                kind: constant
-                value: 'Data Source=SomeServer;Initial Catalog=SomeDB'
+            type: ENTRY
         - match:
               type: class
-              class: Controllers.WeatherForecastController
+              class: traceBankDemo.Controllers.WeatherForecastController
               method: Test
               arguments: 0
           span:
-            name: test-exit-mfi
-            type: INTERMEDIATE
-            tags:
-              - name: db.connection_string
-                kind: constant
-                value: 'Data Source=SomeServer;Initial Catalog=SomeDB'
+            name: myCustom-span-mfi
+            type: EXIT
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
