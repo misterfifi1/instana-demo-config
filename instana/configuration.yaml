@@ -997,6 +997,8 @@ com.instana.plugin.opentelemetry:
 
 # .NET Full Framework tracing
 com.instana.plugin.clr:
+  sensor:
+    enabled: true
   tracing:
     enabled: true
   instrumentation:
