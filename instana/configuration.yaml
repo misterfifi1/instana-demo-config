@@ -1004,12 +1004,20 @@ com.instana.plugin.netcore:
       targets:
         - match:
             type: class
+            class: traceBankDemo.Controllers.ActionController
+            method: GetExecution
+            arguments: 0
+          span:
+            name: "Customer_Creation"
+            type: ENTRY
+        - match:
+            type: class
             class: traceBankDemo.tool.Tool
             method: ExecuteExec
             arguments: 2
           span:
             name: "ExecuteExec_Program"
-            type: ENTRY
+            type: EXIT
             tags:
               - name: customerId
                 kind: argument
