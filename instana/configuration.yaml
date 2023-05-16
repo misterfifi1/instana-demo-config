@@ -1004,9 +1004,9 @@ com.instana.plugin.clr:
       targets:
         - match:
             type: class
-            class: 'traceBankDemo.Controllers.WeatherForecastController'
+            class: 'WeatherForecastController'
             method: 'Get'
-            arguments: 0
+            arguments: 1
           span:
             name: 'test-mfi'
             type: 'ENTRY'
@@ -1016,9 +1016,9 @@ com.instana.plugin.clr:
                 index: 0
         - match:
               type: class
-              class: 'traceBankDemo.Controllers.WeatherForecastController'
+              class: 'WeatherForecastController'
               method: 'Test'
-              arguments: 0
+              arguments: 1
           span:
             name: 'test-exit-mfi'
             type: 'EXIT'
