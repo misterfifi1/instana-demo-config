@@ -1004,20 +1004,24 @@ com.instana.plugin.netcore:
       targets:
         - match:
             type: class
-            class: traceBankDemo.Controllers.WeatherForecastController
-            method: Get
+            class: traceBankDemo.Controllers.ActionController
+            method: GetExecution
             arguments: 0
           span:
-            name: test-mfi
+            name: "Customer Creation"
             type: ENTRY
         - match:
               type: class
-              class: traceBankDemo.Controllers.WeatherForecastController
-              method: Test
-              arguments: 0
+              class: traceBankDemo.tool
+              method: ExecuteExec
+              arguments: 1
           span:
-            name: myCustom-span-mfi
-            type: EXIT
+            name: "ExecuteExec C Program"
+            type: INTERMEDIATE
+            tags:
+              - name: db.statement
+                kind: customerId
+                index: 0
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
