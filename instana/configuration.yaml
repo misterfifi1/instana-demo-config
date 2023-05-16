@@ -1002,7 +1002,7 @@ com.instana.plugin.netcore:
       targets:
         - match:
             type: class
-            class: traceBankDemo.Controllers.WeatherForecastController
+            class: WeatherForecastController
             method: Get
             arguments: 1
           span:
@@ -1017,7 +1017,7 @@ com.instana.plugin.netcore:
                 index: 0
         - match:
               type: class
-              class: traceBankDemo.Controllers.WeatherForecastController
+              class: Controllers.WeatherForecastController
               method: Test
               arguments: 1
           span:
