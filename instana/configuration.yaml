@@ -1004,7 +1004,7 @@ com.instana.plugin.netcore:
             type: class
             class: WeatherForecastController
             method: Get
-            arguments: 1
+            arguments: 0
           span:
             name: test-mfi
             type: INTERMEDIATE
@@ -1012,14 +1012,11 @@ com.instana.plugin.netcore:
               - name: db.connection_string
                 kind: constant
                 value: 'Data Source=SomeServer;Initial Catalog=SomeDB'
-              - name: batch.job
-                kind: argument
-                index: 0
         - match:
               type: class
               class: Controllers.WeatherForecastController
               method: Test
-              arguments: 1
+              arguments: 0
           span:
             name: test-exit-mfi
             type: INTERMEDIATE
@@ -1027,9 +1024,6 @@ com.instana.plugin.netcore:
               - name: db.connection_string
                 kind: constant
                 value: 'Data Source=SomeServer;Initial Catalog=SomeDB'
-              - name: batch.job
-                kind: argument
-                index: 0
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
