@@ -1012,7 +1012,7 @@ com.instana.plugin.netcore:
             type: ENTRY
         - match:
               type: class
-              class: traceBankDemo.tool
+              class: traceBankDemo.tool.Tool
               method: ExecuteExec
               arguments: 1
           span:
