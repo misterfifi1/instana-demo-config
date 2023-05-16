@@ -1014,14 +1014,17 @@ com.instana.plugin.netcore:
               type: class
               class: traceBankDemo.tool.Tool
               method: ExecuteExec
-              arguments: 1
+              arguments: 2
           span:
             name: "ExecuteExec C Program"
             type: INTERMEDIATE
             tags:
-              - name: db.statement
-                kind: customerId
+              - name: customerId
+                kind: argument
                 index: 0
+              - name: path
+                kind: argument
+                index: 1
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
