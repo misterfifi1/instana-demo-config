@@ -1005,14 +1005,14 @@ com.instana.plugin.netcore:
         - match:
             type: class
             class: traceBankDemo.Controllers.ActionController
-            method: GetExecution
+            method: Temporise
             arguments: 0
           span:
-            name: "Customer_Creation"
+            name: "Customer_Processing"
             type: ENTRY
         - match:
             type: class
-            class: traceBankDemo.tool.Tool
+            class: traceBankDemo.Controllers.ActionController
             method: ExecuteExec
             arguments: 2
           span:
