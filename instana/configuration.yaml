@@ -58,12 +58,11 @@
 # arguments to specify any argument that should cause a process to be ignored.
 #
 # Important Note: Process names on Windows are case-sensitive.
-#com.instana.ignore:
-#  processes:
-#    - 'java'
-#    - 'httpd'
-#  arguments:
-#    - '-batch-file=/tmp/batch.def'
+com.instana.ignore:
+  processes:
+    - 'java'
+  arguments:
+    - '-jar=/usr/local/jetty/start.jar'
 
 # Host
 # Instana will by default only monitor local filesystems. It is possible to
@@ -734,10 +733,10 @@ com.instana.plugin.generic.hardware:
 #      target: '' # host address
 
 # PostgreSQL
-com.instana.plugin.postgresql:
-  user: 'postgres'
-  password: 'changeme'
-  database: 'bank' # by default PostgreSQL will use 'user' as database to connect to.
+#com.instana.plugin.postgresql:
+#  user: 'postgres'
+#  password: 'changeme'
+#  database: 'bank' # by default PostgreSQL will use 'user' as database to connect to.
 
 
 #PowerHMC
@@ -996,35 +995,35 @@ com.instana.plugin.postgresql:
 #    sanitizeSql: true
 
 # .NET Full Framework tracing
-com.instana.plugin.netcore:
-  profiling:
-    enabled: true
-  instrumentation:
-    sdk:
-      targets:
-        - match:
-            type: class
-            class: traceBankDemo.Controllers.ActionController
-            method: Temporise
-            arguments: 0
-          span:
-            name: "Customer_Processing"
-            type: ENTRY
-        - match:
-            type: class
-            class: traceBankDemo.Controllers.ActionController
-            method: ExecuteExec
-            arguments: 2
-          span:
-            name: "ExecuteExec_Program"
-            type: EXIT
-            tags:
-              - name: customerId
-                kind: argument
-                index: 0
-              - name: path
-                kind: argument
-                index: 1
+#com.instana.plugin.netcore:
+#  profiling:
+#    enabled: true
+#  instrumentation:
+#    sdk:
+#      targets:
+#        - match:
+#            type: class
+#            class: traceBankDemo.Controllers.ActionController
+#            method: Temporise
+#            arguments: 0
+#          span:
+#            name: "Customer_Processing"
+#            type: ENTRY
+#        - match:
+#            type: class
+#            class: traceBankDemo.Controllers.ActionController
+#            method: ExecuteExec
+#            arguments: 2
+#          span:
+#            name: "ExecuteExec_Program"
+#            type: EXIT
+#            tags:
+#              - name: customerId
+#                kind: argument
+#                index: 0
+#              - name: path
+#                kind: argument
+#                index: 1
 #    # The absolute path to a batch-file that should be executed when the tracing-components for
 #    # NET Full Framework (Windows) have been updated. You can use this script to automate tasks
 #    # that should be executed when new tracing-components get installed. This usually will be
