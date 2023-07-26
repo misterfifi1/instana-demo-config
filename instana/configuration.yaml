@@ -59,8 +59,6 @@
 #
 # Important Note: Process names on Windows are case-sensitive.
 com.instana.ignore:
-  processes:
-    - 'java'
   arguments:
     - '-jar=/usr/local/jetty/start.jar'
 
