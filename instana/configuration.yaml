@@ -60,7 +60,7 @@
 # Important Note: Process names on Windows are case-sensitive.
 com.instana.ignore:
   arguments:
-    - '-jar=/usr/local/jetty/start.jar'
+    - '-cp=app:app/lib/*'
 
 # Host
 # Instana will by default only monitor local filesystems. It is possible to
