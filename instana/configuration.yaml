@@ -60,7 +60,7 @@
 # Important Note: Process names on Windows are case-sensitive.
 com.instana.ignore:
   arguments:
-    - 'hello.Application'
+    - 'com.example.demo.DemoApplication'
 
 # Host
 # Instana will by default only monitor local filesystems. It is possible to
