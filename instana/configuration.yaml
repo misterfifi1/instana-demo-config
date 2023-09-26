@@ -58,9 +58,9 @@
 # arguments to specify any argument that should cause a process to be ignored.
 #
 # Important Note: Process names on Windows are case-sensitive.
-com.instana.ignore:
-  arguments:
-    - 'com.example.demo.DemoApplication'
+#com.instana.ignore:
+#  arguments:
+#    - 'com.example.demo.DemoApplication'
 
 # Host
 # Instana will by default only monitor local filesystems. It is possible to
@@ -941,8 +941,8 @@ com.instana.plugin.generic.hardware:
 #        - 'com.instana.frontend'
 
 # OpenTelemetry Collector
-#com.instana.plugin.opentelemetry:
-#  enabled: true
+com.instana.plugin.opentelemetry:
+  enabled: true
 
 
 # PHP Tracing
