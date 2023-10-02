@@ -675,9 +675,9 @@ com.instana.plugin.generic.hardware:
 #  port: ''
 
 # Mysql
-#com.instana.plugin.mysql:
-#  user: ''
-#  password: ''
+com.instana.plugin.mysql:
+  user: 'admin'
+  password: 'pwd'
 #  schema_excludes: ['INFORMATION_SCHEMA', 'PERFORMANCE_SCHEMA']
 #  sslTrustStore: '/path/to/truststore.jks'
 #  sslTrustStorePassword: 'mysqlTsPassword'
@@ -731,10 +731,10 @@ com.instana.plugin.generic.hardware:
 #      target: '' # host address
 
 # PostgreSQL
-#com.instana.plugin.postgresql:
-#  user: 'postgres'
-#  password: 'changeme'
-#  database: 'bank' # by default PostgreSQL will use 'user' as database to connect to.
+com.instana.plugin.postgresql:
+  user: 'root'
+  password: 'admin'
+  database: 'postgres' # by default PostgreSQL will use 'user' as database to connect to.
 
 
 #PowerHMC
@@ -943,7 +943,10 @@ com.instana.plugin.generic.hardware:
 # OpenTelemetry Collector
 com.instana.plugin.opentelemetry:
   enabled: true
-
+  grpc:
+    enabled: true
+  http:
+    enabled: true
 
 # PHP Tracing
 #com.instana.plugin.php:
