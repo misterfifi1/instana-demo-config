@@ -634,8 +634,8 @@ com.instana.plugin.generic.hardware:
 #  password: '' #default is 'user'
 
 # Kafka
-#com.instana.plugin.kafka:
-#  topicsRegex: '.*'
+com.instana.plugin.kafka:
+  topicsRegex: '.*'
 #  brokerPropertiesFilePath: ''
 #  collectLagData: '' # true or false. The default value is true
 #  sslTrustStore: '/path/to/truststore.jks'
@@ -676,8 +676,9 @@ com.instana.plugin.generic.hardware:
 
 # Mysql
 com.instana.plugin.mysql:
-  user: 'admin'
-  password: 'pwd'
+  user: 'springuser'
+  password: 'ThePassword'
+  port: '3306'
 #  schema_excludes: ['INFORMATION_SCHEMA', 'PERFORMANCE_SCHEMA']
 #  sslTrustStore: '/path/to/truststore.jks'
 #  sslTrustStorePassword: 'mysqlTsPassword'
@@ -732,8 +733,8 @@ com.instana.plugin.mysql:
 
 # PostgreSQL
 com.instana.plugin.postgresql:
-  user: 'root'
-  password: 'admin'
+  user: 'postgres'
+  password: 'Pass2020!'
   database: 'postgres' # by default PostgreSQL will use 'user' as database to connect to.
 
 
